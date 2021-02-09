@@ -1,117 +1,226 @@
-*.suo
-*.cache
-*.csprojAssemblyReference
-*.dll
-*.exe
-*.pdb
-/build/
+# The following command works for downloading when using Git for Windows:
+# curl -LOf http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+#
+# Download this file using PowerShell v3 under Windows with the following comand:
+# Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
+#
+# or wget:
+# wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+
+# User-specific files
 *.suo
 *.user
-_ReSharper.*/
-*.sdf
-*.opensdf
-*.tlog
-*.log
-TestResult.xml
-*.VisualState.xml
-Version.cs
-Version.h
-Version.cpp
-Gaming-Library/Gaming-Library/Form1.resx
-Gaming-Library/Gaming-Library/bin/Debug/Gaming-Library.exe.config
-Gaming-Library/Gaming-Library/bin/Debug/Microsoft.Bcl.AsyncInterfaces.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Grid.Base.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Grid.Windows.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Shared.Base.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Shared.Windows.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Tools.Base.xml
-Gaming-Library/Gaming-Library/bin/Debug/Syncfusion.Tools.Windows.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Buffers.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Memory.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Numerics.Vectors.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Text.Encodings.Web.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Text.Json.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.Threading.Tasks.Extensions.xml
-Gaming-Library/Gaming-Library/bin/Debug/System.ValueTuple.xml
-Gaming-Library/Gaming-Library/obj/Debug/Gaming_Library.Form1.resources
-Gaming-Library/Gaming-Library/obj/Debug/Gaming_Library.Properties.Resources.resources
-Gaming-Library/Gaming-Library/obj/Debug/Gaming-Library.csproj.CopyComplete
-Gaming-Library/Gaming-Library/obj/Debug/Gaming-Library.csproj.FileListAbsolute.txt
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/Syncfusion.Grid.Base.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net20/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net35/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net40/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net45/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net451/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Base.18.2.0.48/lib/net46/Syncfusion.Grid.Base.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/Syncfusion.Grid.Windows.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net20/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net35/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net40/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net45/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net451/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/net46/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/netcoreapp3.1/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Grid.Windows.18.2.0.48/lib/netcoreapp5.0/Syncfusion.Grid.Windows.xml
-Gaming-Library/packages/Syncfusion.Licensing.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Licensing.18.2.0.48/Syncfusion.Licensing.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/Syncfusion.Shared.Base.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net20/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net35/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net40/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net45/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net451/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/net46/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/netcoreapp3.1/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Base.18.2.0.48/lib/netcoreapp5.0/Syncfusion.Shared.Base.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/Syncfusion.Shared.Windows.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net20/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net35/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net40/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net45/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net451/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/net46/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/netcoreapp3.1/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.Shared.Windows.18.2.0.48/lib/netcoreapp5.0/Syncfusion.Shared.Windows.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/Syncfusion.SpellChecker.Base.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/net35/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/net40/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/net45/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/net451/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/net46/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/netcoreapp3.1/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.SpellChecker.Base.18.2.0.48/lib/netcoreapp5.0/Syncfusion.SpellChecker.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/Syncfusion.Tools.Base.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net20/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net35/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net40/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net45/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net451/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/net46/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/netcoreapp3.1/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Base.18.2.0.48/lib/netcoreapp5.0/Syncfusion.Tools.Base.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/.signature.p7s
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/Syncfusion.Tools.Windows.18.2.0.48.nupkg
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net20/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net35/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net40/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net45/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net451/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/net46/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/netcoreapp3.1/Syncfusion.Tools.Windows.xml
-Gaming-Library/packages/Syncfusion.Tools.Windows.18.2.0.48/lib/netcoreapp5.0/Syncfusion.Tools.Windows.xml
-Gaming-Library/Gaming-Library/bin/Debug/ObjectListView.xml
-Gaming-Library/packages/ObjectListView.Official.2.9.1/.signature.p7s
-Gaming-Library/packages/ObjectListView.Official.2.9.1/ObjectListView.Official.2.9.1.nupkg
-Gaming-Library/packages/ObjectListView.Official.2.9.1/lib/net20/ObjectListView.XML
+*.sln.docstates
 
-Gaming-Library/.vs/Gaming-Library/v16/Server/sqlite3/db.lock
-Gaming-Library/.vs/Gaming-Library/v16/Server/sqlite3/storage.ide
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+# build folder is nowadays used for build scripts and should not be ignored
+#build/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+testlog.manifest
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.scc
+
+# OS generated files #
+.DS_Store*
+Icon?
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.Publish.xml
+
+# Windows Azure Build Output
+csx
+*.build.csdef
+
+# Windows Store app package directory
+AppPackages/
+
+# Others
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+*.[Pp]ublish.xml
+*.pfx
+*.publishsettings
+modulesbin/
+tempbin/
+
+# EPiServer Site file (VPP)
+AppData/
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file to a newer
+# Visual Studio version. Backup files are not needed, because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# vim
+*.txt~
+*.swp
+*.swo
+
+# Temp files when opening LibreOffice on ubuntu
+.~lock.*
+ 
+# svn
+.svn
+
+# CVS - Source Control
+**/CVS/
+
+# Remainings from resolving conflicts in Source Control
+*.orig
+
+# SQL Server files
+**/App_Data/*.mdf
+**/App_Data/*.ldf
+**/App_Data/*.sdf
+
+
+#LightSwitch generated files
+GeneratedArtifacts/
+_Pvt_Extensions/
+ModelManifest.xml
+
+# =========================
+# Windows detritus
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
+
+# SASS Compiler cache
+.sass-cache
+
+# Visual Studio 2014 CTP
+**/*.sln.ide
+
+# Visual Studio temp something
+.vs/
+
+# dotnet stuff
+project.lock.json
+
+# VS 2015+
+*.vc.vc.opendb
+*.vc.db
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Output folder used by Webpack or other FE stuff
+**/node_modules/*
+**/wwwroot/*
+
+# SpecFlow specific
+*.feature.cs
+*.feature.xlsx.*
+*.Specs_*.html
+
+#####
+# End of core ignore list, below put you custom 'per project' settings (patterns or path)
+#####

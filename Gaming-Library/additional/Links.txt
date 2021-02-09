@@ -1,0 +1,5 @@
+http://api.steampowered.com/ISteamApps/GetAppList/v0002/
+https://store.steampowered.com/api/appdetails?appids=730
+https://partner.steamgames.com/doc/sdk/api#1
+http://steamworks.github.io/gettingstarted/
+Get Icon: https://stackoverflow.com/questions/462270/get-file-icon-used-by-shell
