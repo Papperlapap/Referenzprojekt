@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 {
-    public partial class GameProperties : Form, Dialog.Adapter.View.IView
+    public partial class GameProperties : Form, Adapter.View.IView
     {
         private bool _isPropertiesViewCollapsed = true;
         private readonly Adapter.Controller.IController _controller;
@@ -31,13 +31,13 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         }
         public void UpdateView()
         {
-            throw new NotImplementedException();
+            SetupControls();
         }
 
         private void SetupTooltips()
         {
             toolTip1.SetToolTip(buttonSetFolderPath, "Wähle hier den lokalen Pfad der .exe-Datei.");
-            toolTip1.SetToolTip(genresCombo, "Wähle hier das Haupt-Genre dieses Spieles aus.");
+            toolTip1.SetToolTip(genresList, "Wähle hier das Haupt-Genre dieses Spieles aus.");
             toolTip1.SetToolTip(buttonEditGenres, "Passe hier die für dieses Spiel zutreffenden Genres an.");
             toolTip1.SetToolTip(buttonSetImagePath, "Wähle hier das anzuzeigende Bild aus.");
             toolTip1.SetToolTip(buttonSearchForTitle, "Es werden die zu dem eingegebenen Titel passenden Spiele auf Steam gesucht.");
@@ -55,8 +55,9 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             publisher.Text = _game.Publisher;
             tags.Text = string.Join(",", _game.Tags);
 
+            genresList.Clear();
             foreach (var genre in _game.Genres.Split(',')) {
-                genresCombo.Items.Add(genre.Trim());
+                genresList.Items.Add(genre.Trim());
             }
             locationPath.Text = Path.GetFileName(_game.Location);
             title.Text = _game.Title;
@@ -87,8 +88,8 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             _game.Tags = tags.Text.Split(',').ToArray();
             _game.Genres = "";
 
-            foreach (var item in genresCombo.Items) {
-                _game.Genres += (string)item + ", ";
+            foreach (var item in genresList.Items) {
+                _game.Genres += ((ListViewItem)item).Text + ", ";
             }
 
             _game.Genres = _game.Genres.TrimEnd(',', ' ');
@@ -204,34 +205,8 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         private void buttonEditGenres_Click(object sender, EventArgs e)
         {
-            var interactorModel = new GenresPropertyDialog.BL.UseCase.Interactor.Model();
-            var viewModel = new GenresPropertyDialog.FE.Dialog.Adapter.View.Model();
-
-            foreach (var genre in genresCombo.Items) {
-                viewModel.Genres.Genres.Add((string)genre);
-            }
-
-            var commands = GenresPropertyDialog.BL.UseCase.Interactor.Commands.Commands.Create();
-            commands.Add(GenresPropertyDialog.BL.UseCase.Interactor.Commands.Save.Create(interactorModel));
-
-            var views = new List<GenresPropertyDialog.FE.Dialog.Adapter.View.IView>();
-
-            var presenterInjector = new GenresPropertyDialog.FE.Dialog.Adapter.Presenter.Presenter.Injector(viewModel, views);
-            var presenter = GenresPropertyDialog.FE.Dialog.Adapter.Presenter.Presenter.Create(presenterInjector);
-
-            var interactorInjector = new GenresPropertyDialog.BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);
-            var interactor = GenresPropertyDialog.BL.UseCase.Interactor.Interactor.Create(interactorInjector);
-
-            var controllerInjector = new GenresPropertyDialog.FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor);
-            var controller = GenresPropertyDialog.FE.Dialog.Adapter.Controller.Controller.Create(controllerInjector);
-
-
-            var genresPropertyDialog = new GenresPropertyDialog.FE.Dialog.Framework.UserInterface.ListOfGenres(controller, viewModel);
-
-            if (genresPropertyDialog.ShowDialog(this) == DialogResult.OK) {
-                genresCombo.Items.Clear();
-                genresCombo.Items.AddRange(viewModel.Genres.Genres.ToArray());
-            }
+            _controller.EditGenres(_gameIndex, _game);
+            UpdateView();
         }
     }
 }

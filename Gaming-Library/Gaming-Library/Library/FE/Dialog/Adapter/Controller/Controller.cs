@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.DirectoryServices;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity;
+using System.Windows.Forms;
 using Gaming_Library.BL.UseCase.InputPort;
 using Gaming_Library.BL.UseCase.InputPort.Requests;
 
@@ -18,11 +13,13 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
         {
             public View.Model ViewModel;
             public IInteractor Interactor;
+            public IGenresEditor GenresEditor;
 
-            public Injector(View.Model viewModel, IInteractor interactor)
+            public Injector(View.Model viewModel, IInteractor interactor, IGenresEditor genresEditor)
             {
                 ViewModel = viewModel;
                 Interactor = interactor;
+                GenresEditor = genresEditor;
             }
         }
 
@@ -75,6 +72,13 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
         {
             SendRequest(new BL.UseCase.InputPort.Requests.SearchForGame(title));
         }
+
+        public void EditGenres(int index, View.Model.GameData game)
+        {
+            var genres = _injector.GenresEditor.UpdateGenres(index);
+            game.Genres = string.Join(",", genres.Genres.Genres);
+        }
+
 
         private void SendRequest(IRequest request)
         {
