@@ -21,11 +21,47 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public string ImagePath;
             public string[] Tags;
             public string Genres;
-            public GameAttributes Attributes;
+            public GameAttributes Attributes = new GameAttributes();
 
             public GameData()
             {
-                Attributes = new GameAttributes();
+            }
+
+            public GameData(string steamId,
+                string title,
+                string publisher,
+                string location,
+                string year,
+                Bitmap image,
+                string imagePath,
+                string[] tags,
+                string genres,
+                GameAttributes attributes)
+            {
+                SteamId = steamId;
+                Title = title;
+                Publisher = publisher;
+                Location = location;
+                Year = year;
+                Image = image;
+                ImagePath = imagePath;
+                Tags = tags;
+                Genres = genres;
+                Attributes = attributes;
+            }
+
+            public GameData DeepCopy(GameData other)
+            {
+                return new GameData(other.SteamId,
+                    other.Title,
+                    other.Publisher,
+                    other.Location,
+                    other.Year,
+                    other.Image,
+                    other.ImagePath,
+                    other.Tags,
+                    other.Genres,
+                    other.Attributes);
             }
         }
 

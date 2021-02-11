@@ -14,8 +14,9 @@ namespace Game_Library.FE.Dialog.Adapter.Presenter
         {
             var viewModel = new Gaming_Library.FE.Dialog.Adapter.View.Model();
             var interactor = new Mock<IInteractor>();
+            var genresEditor = new Mock<Gaming_Library.FE.Dialog.Adapter.Controller.IGenresEditor>();
 
-            var injector = new Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor.Object);
+            var injector = new Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor.Object, genresEditor.Object);
             var controller = Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Create(injector);
 
             Assert.IsNotNull(controller);
@@ -26,8 +27,9 @@ namespace Game_Library.FE.Dialog.Adapter.Presenter
         {
             var viewModel = new Gaming_Library.FE.Dialog.Adapter.View.Model();
             var interactor = new Mock<IInteractor>();
+            var genresEditor = new Mock<Gaming_Library.FE.Dialog.Adapter.Controller.IGenresEditor>();
 
-            var injector = new Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor.Object);
+            var injector = new Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor.Object, genresEditor.Object);
             var controller = Gaming_Library.FE.Dialog.Adapter.Controller.Controller.Create(injector);
 
             Assert.IsNotNull(controller);

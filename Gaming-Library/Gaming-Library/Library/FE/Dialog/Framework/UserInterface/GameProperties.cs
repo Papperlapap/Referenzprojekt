@@ -3,23 +3,24 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
-using System.Collections.Generic;
 
 namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 {
     public partial class GameProperties : Form, Adapter.View.IView
     {
         private bool _isPropertiesViewCollapsed = true;
+        private Adapter.View.Model.GameData _game;
         private readonly Adapter.Controller.IController _controller;
-        private readonly Adapter.View.Model.GameData _game;
         private readonly int _gameIndex;
         private readonly Point _location;
+
 
         public GameProperties(Adapter.Controller.IController controller, Point location, Adapter.View.Model.GameData game, int gameIndex = -1)
         {
             _controller = controller;
             _location = location;
-            _game = game;
+
+            _game = new Adapter.View.Model.GameData().DeepCopy(game);
             _gameIndex = gameIndex;
 
             InitializeComponent();
