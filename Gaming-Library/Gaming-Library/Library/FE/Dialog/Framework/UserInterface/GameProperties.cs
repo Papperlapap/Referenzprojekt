@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Gaming_Library.FE.Dialog.Framework.UserInterface
+namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
 {
     public partial class GameProperties : Form, Adapter.View.IView
     {

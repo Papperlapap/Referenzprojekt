@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using Gaming_Library.BL.UseCase.InputPort;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
+using Gaming_Library.Library.BL.UseCase.InputPort;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Controller
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
     public class Controller : IController
     {

@@ -4,10 +4,10 @@ using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.OutputPort;
-using Gaming_Library.FE.Dialog.Adapter.View;
+using Gaming_Library.Library.BL.UseCase.OutputPort;
+using Gaming_Library.Library.FE.Dialog.Adapter.View;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Presenter
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Presenter
 {
     public class Presenter : IPresenter
     {

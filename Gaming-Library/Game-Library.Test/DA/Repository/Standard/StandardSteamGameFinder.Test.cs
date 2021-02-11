@@ -1,15 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Gaming_Library.DA.Repository.Standard;
-using Gaming_Library.BL.UseCase.Entity;
-using System.IO;
+using Gaming_Library.Library.DA.Repository.Standard;
 
-namespace Game_Library.Test.DA.Repository.Standard
+
+namespace Game_Library.Library.Test.DA.Repository.Standard
 {
     [TestClass]
     public class StandardSteamGameFinderTest
@@ -29,13 +26,13 @@ namespace Game_Library.Test.DA.Repository.Standard
         [TestMethod]
         public void FindGameOneMatchingTest()
         {
-            var games = new Gaming_Library.DA.Repository.SteamGameList();
-            games.applist = new Gaming_Library.DA.Repository.AppList();
-            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
+            var games = new Gaming_Library.Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.Library.DA.Repository.App>()
             {
-                new Gaming_Library.DA.Repository.App(1,"Game1"),
-                new Gaming_Library.DA.Repository.App(2,"fghfgh"),
-                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
+                new Gaming_Library.Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.Library.DA.Repository.App(2,"fghfgh"),
+                new Gaming_Library.Library.DA.Repository.App(3,"otherStuff"),
             };
             File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
             var finder = StandardSteamGameFinder.Create();
@@ -47,13 +44,13 @@ namespace Game_Library.Test.DA.Repository.Standard
         [TestMethod]
         public void FindGameNoneMatchingTest()
         {
-            var games = new Gaming_Library.DA.Repository.SteamGameList();
-            games.applist = new Gaming_Library.DA.Repository.AppList();
-            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
+            var games = new Gaming_Library.Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.Library.DA.Repository.App>()
             {
-                new Gaming_Library.DA.Repository.App(1,"Game1"),
-                new Gaming_Library.DA.Repository.App(2,"Gam"),
-                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
+                new Gaming_Library.Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.Library.DA.Repository.App(2,"Gam"),
+                new Gaming_Library.Library.DA.Repository.App(3,"otherStuff"),
             };
             File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
             var finder = StandardSteamGameFinder.Create();
@@ -65,13 +62,13 @@ namespace Game_Library.Test.DA.Repository.Standard
         [TestMethod]
         public void FindGameMultipleMatchingTest()
         {
-            var games = new Gaming_Library.DA.Repository.SteamGameList();
-            games.applist = new Gaming_Library.DA.Repository.AppList();
-            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
+            var games = new Gaming_Library.Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.Library.DA.Repository.App>()
             {
-                new Gaming_Library.DA.Repository.App(1,"Game1"),
-                new Gaming_Library.DA.Repository.App(2,"Gam"),
-                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
+                new Gaming_Library.Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.Library.DA.Repository.App(2,"Gam"),
+                new Gaming_Library.Library.DA.Repository.App(3,"otherStuff"),
             };
 
             File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));

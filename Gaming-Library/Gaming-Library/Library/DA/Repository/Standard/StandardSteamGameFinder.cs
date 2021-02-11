@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.DA.Repository.Standard
+namespace Gaming_Library.Library.DA.Repository.Standard
 {
     public class StandardSteamGameFinder : ISteamGameFinder
     {

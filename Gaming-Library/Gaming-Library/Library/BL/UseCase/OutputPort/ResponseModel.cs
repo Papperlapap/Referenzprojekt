@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.BL.UseCase.OutputPort
+namespace Gaming_Library.Library.BL.UseCase.OutputPort
 {
     public sealed class ResponseModel : IResponseModel
     {

@@ -5,11 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity.Types;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
-using Gaming_Library.BL.UseCase.Interactor.PathComposer;
+using Gaming_Library.Library.BL.UseCase.Entity.Types;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
+using Gaming_Library.Library.BL.UseCase.Interactor.PathComposer;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     public class Start : ICommand
     {

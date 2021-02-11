@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.BL.UseCase.Entity.Types
+namespace Gaming_Library.Library.BL.UseCase.Entity.Types
 {
     [Equals]
     public sealed class Genre

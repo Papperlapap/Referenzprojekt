@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace Gaming_Library.GenresPropertyDialog.FE.Adapter.Controller
 {
-    public class GenresEditor : Gaming_Library.FE.Dialog.Adapter.Controller.IGenresEditor
+    public class GenresEditor : Library.FE.Dialog.Adapter.Controller.IGenresEditor
     {
-        private Gaming_Library.FE.Dialog.Adapter.View.Model _viewModel;
-        public GenresEditor(Gaming_Library.FE.Dialog.Adapter.View.Model viewModel)
+        private Library.FE.Dialog.Adapter.View.Model _viewModel;
+        public GenresEditor(Library.FE.Dialog.Adapter.View.Model viewModel)
         {
             _viewModel = viewModel;
         }

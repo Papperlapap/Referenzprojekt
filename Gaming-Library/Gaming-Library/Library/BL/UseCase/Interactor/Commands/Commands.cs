@@ -4,9 +4,9 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     public class Commands : ICommands
     {

@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.Library.BL.UseCase.Entity;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Controller
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
     public interface IController
     {

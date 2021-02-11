@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Controller
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
     public interface IGenresEditor
     {

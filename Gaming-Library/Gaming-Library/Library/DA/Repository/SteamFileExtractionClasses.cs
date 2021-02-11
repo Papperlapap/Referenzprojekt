@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.DA.Repository
+namespace Gaming_Library.Library.DA.Repository
 {
     public class SteamGameList
     {

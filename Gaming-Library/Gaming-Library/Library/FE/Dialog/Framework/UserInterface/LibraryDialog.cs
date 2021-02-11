@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Gaming_Library.FE.Dialog.Adapter.View;
-using Gaming_Library.FE.Dialog.Framework.UserInterface;
+using Gaming_Library.Library.FE.Dialog.Adapter.View;
+using Gaming_Library.Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;
 
-namespace Gaming_Library
+namespace Gaming_Library.Library
 {
     public partial class LibraryDialog : Form, IView
     {

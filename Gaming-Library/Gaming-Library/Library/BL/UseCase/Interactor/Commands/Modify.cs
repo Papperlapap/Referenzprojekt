@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Gaming_Library.BL.UseCase.Entity.Types;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
+using Gaming_Library.Library.BL.UseCase.Entity.Types;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     public class Modify : ICommand
     {

@@ -1,6 +1,6 @@
-﻿using Gaming_Library.BL.UseCase.InputPort.Requests;
+﻿using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     class Delete : ICommand
     {

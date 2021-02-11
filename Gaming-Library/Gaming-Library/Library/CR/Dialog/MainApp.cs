@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gaming_Library
+namespace Gaming_Library.Library
 {
     static class MainApp
     {

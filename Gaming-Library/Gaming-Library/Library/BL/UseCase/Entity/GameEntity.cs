@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Gaming_Library.BL.UseCase.Entity
+﻿namespace Gaming_Library.Library.BL.UseCase.Entity
 {
     class GameEntity : IGameEntity
     {

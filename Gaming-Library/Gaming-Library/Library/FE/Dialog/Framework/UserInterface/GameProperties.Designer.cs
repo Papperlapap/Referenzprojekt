@@ -1,4 +1,4 @@
-﻿namespace Gaming_Library.FE.Dialog.Framework.UserInterface
+﻿namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
 {
     partial class GameProperties
     {

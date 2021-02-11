@@ -26,7 +26,7 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Dialog.Adapter.Controller
             var genres = new BL.UseCase.Entity.GenreData();
 
             foreach (var genre in _genres.Genres.Genres) {
-                genres.Genres = genres.Genres.Append(new Gaming_Library.BL.UseCase.Entity.Types.Genre(genre)).ToArray();
+                genres.Genres = genres.Genres.Append(new Library.BL.UseCase.Entity.Types.Genre(genre)).ToArray();
             }
 
             var saveRequest = new BL.UseCase.InputPort.Requests.Save(genres);

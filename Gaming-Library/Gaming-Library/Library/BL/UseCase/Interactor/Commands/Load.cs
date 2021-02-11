@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
-using Gaming_Library.DA;
+using Gaming_Library.Library.BL.UseCase.Entity;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     class Load : ICommand
     {

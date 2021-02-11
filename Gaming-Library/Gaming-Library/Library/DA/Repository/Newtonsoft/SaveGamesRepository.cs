@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.Library.BL.UseCase.Entity;
 
-namespace Gaming_Library.DA.Repository.Newtonsoft
+namespace Gaming_Library.Library.DA.Repository.Newtonsoft
 {
     public class NewtonsoftSaveGamesRepository : ISaveGamesRepository
     {

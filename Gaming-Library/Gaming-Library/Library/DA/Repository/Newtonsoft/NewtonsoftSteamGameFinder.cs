@@ -6,7 +6,7 @@ using System.Text;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.DA.Repository.Newtonsoft
+namespace Gaming_Library.Library.DA.Repository.Newtonsoft
 {
     public class NewtonsoftSteamGameFinder : ISteamGameFinder
     {
