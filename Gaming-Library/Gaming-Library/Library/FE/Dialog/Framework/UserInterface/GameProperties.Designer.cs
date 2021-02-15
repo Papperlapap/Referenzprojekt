@@ -105,7 +105,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -116,7 +116,7 @@
             // 
             // buttonProperties
             // 
-            this.buttonProperties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonProperties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonProperties.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonProperties.FlatAppearance.BorderSize = 0;
@@ -268,8 +268,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel1.Controls.Add(this.publisher);
@@ -490,16 +490,16 @@
             this.genresList.Location = new System.Drawing.Point(91, 115);
             this.genresList.MinimumSize = new System.Drawing.Size(75, 45);
             this.genresList.Name = "genresList";
-            this.genresList.Size = new System.Drawing.Size(89, 45);
+            this.genresList.Size = new System.Drawing.Size(96, 45);
             this.genresList.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.genresList.TabIndex = 33;
             this.genresList.UseCompatibleStateImageBehavior = false;
-            this.genresList.View = System.Windows.Forms.View.List;
+            this.genresList.View = System.Windows.Forms.View.Details;
             // 
             // Genre
             // 
             this.Genre.Text = "Genre";
-            this.Genre.Width = 78;
+            this.Genre.Width = 75;
             // 
             // GameProperties
             // 

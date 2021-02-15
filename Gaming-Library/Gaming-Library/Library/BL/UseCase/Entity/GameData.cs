@@ -21,7 +21,7 @@ namespace Gaming_Library.Library.BL.UseCase.Entity
         public YearOfPublication Year { get; set; }
 
         public Image Image { get; set; }
-        public Tag[] Tags { get; set; }
+        public List<Tag> Tags { get; set; }
         public Genre[] Genres { get; set; }
         public GameAttributes Attributes { get; set; }
 

@@ -19,7 +19,7 @@ namespace Gaming_Library.Library.FE.Dialog.Adapter.View
             public string Year;
             public Bitmap Image;
             public string ImagePath;
-            public string[] Tags;
+            public List<string> Tags;
             public string Genres;
             public GameAttributes Attributes = new GameAttributes();
 
@@ -34,7 +34,7 @@ namespace Gaming_Library.Library.FE.Dialog.Adapter.View
                 string year,
                 Bitmap image,
                 string imagePath,
-                string[] tags,
+                List<string> tags,
                 string genres,
                 GameAttributes attributes)
             {

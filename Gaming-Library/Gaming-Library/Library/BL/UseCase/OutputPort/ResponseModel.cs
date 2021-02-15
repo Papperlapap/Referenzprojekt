@@ -16,7 +16,7 @@ namespace Gaming_Library.Library.BL.UseCase.OutputPort
             public Entity.Types.Location Location;
             public Entity.Types.YearOfPublication Year;
             public Entity.Types.Image Image;
-            public Entity.Types.Tag[] Tags;
+            public List<Entity.Types.Tag> Tags;
             public Entity.Types.Genre[] Genres;
             public Entity.Types.GameAttributes Attributes;
         }

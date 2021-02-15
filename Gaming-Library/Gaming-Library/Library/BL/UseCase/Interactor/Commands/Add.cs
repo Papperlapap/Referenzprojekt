@@ -36,14 +36,14 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
                 Publisher = new Publisher(addRequest.Game.Publisher),
                 Location = new Location(addRequest.Game.Location),
                 Image = new Image(addRequest.Game.ImagePath),
-                Tags = new Tag[0] { },
+                Tags = new List<Tag>(),
                 Year = new YearOfPublication(new DateTime(Convert.ToInt32(addRequest.Game.Year), 1, 1)),
                 Genres = new Genre[1] { new Genre(addRequest.Game.Genre) },
                 Attributes = addRequest.Game.Attributes,
             });
             foreach (var tag in addRequest.Game.Tags) {
                 var index = _model.Games.Count - 1;
-                _model.Games[index].Tags = _model.Games[index].Tags.Append(new Tag(tag)).ToArray();
+                _model.Games[index].Tags.Add(new Tag(tag));
 
             }
             _repository.SaveToFile(_model.Games, "games.json");

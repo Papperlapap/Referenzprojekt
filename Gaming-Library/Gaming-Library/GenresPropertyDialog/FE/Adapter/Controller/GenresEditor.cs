@@ -22,7 +22,7 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Adapter.Controller
             var viewModel = new Model();
 
             foreach (var genre in _viewModel.Games.ElementAt(index).Genres.Split(',')) {
-                viewModel.Genres.Genres.Add(genre);
+                viewModel.Genres.Genres.Add(genre.Trim());
             }
 
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();

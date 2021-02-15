@@ -38,7 +38,6 @@ namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
         private void SetupTooltips()
         {
             toolTip1.SetToolTip(buttonSetFolderPath, "Wähle hier den lokalen Pfad der .exe-Datei.");
-            toolTip1.SetToolTip(genresList, "Wähle hier das Haupt-Genre dieses Spieles aus.");
             toolTip1.SetToolTip(buttonEditGenres, "Passe hier die für dieses Spiel zutreffenden Genres an.");
             toolTip1.SetToolTip(buttonSetImagePath, "Wähle hier das anzuzeigende Bild aus.");
             toolTip1.SetToolTip(buttonSearchForTitle, "Es werden die zu dem eingegebenen Titel passenden Spiele auf Steam gesucht.");
@@ -56,7 +55,7 @@ namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
             publisher.Text = _game.Publisher;
             tags.Text = string.Join(",", _game.Tags);
 
-            genresList.Clear();
+            genresList.Items.Clear();
             foreach (var genre in _game.Genres.Split(',')) {
                 genresList.Items.Add(genre.Trim());
             }
@@ -86,7 +85,7 @@ namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
             _game.Attributes.IsVRSupportive = isVR.Checked;
             _game.Attributes.HasAchievements = true;
             _game.Publisher = publisher.Text;
-            _game.Tags = tags.Text.Split(',').ToArray();
+            _game.Tags = tags.Text.Split(',').ToList();
             _game.Genres = "";
 
             foreach (var item in genresList.Items) {
