@@ -11,14 +11,14 @@ namespace Gaming_Library.ChooseSteamGame.BL.UseCase.Entity
     {
         public Entity.Types.SteamGameList searchResultList { get; set; }
         public Entity.Types.SteamGameList allSteamGames { get; set; }
-        public Gaming_Library.BL.UseCase.Entity.Types.SteamId steamId { get; set; }
+        public Gaming_Library.Library.BL.UseCase.Entity.Types.SteamId steamId { get; set; }
         public Entity.Types.SearchTerm searchTerm { get; set; }
 
         public SteamGameData()
         {
             searchResultList = new Types.SteamGameList();
             allSteamGames = new Types.SteamGameList();
-            steamId = new Gaming_Library.BL.UseCase.Entity.Types.SteamId(null);
+            steamId = new Gaming_Library.Library.BL.UseCase.Entity.Types.SteamId(null);
             searchTerm = new Types.SearchTerm("");
         }
 

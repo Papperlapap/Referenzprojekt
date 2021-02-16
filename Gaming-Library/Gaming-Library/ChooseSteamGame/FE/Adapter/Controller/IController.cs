@@ -1,4 +1,4 @@
-﻿using Gaming_Library.BL.UseCase.Entity;
+﻿using Gaming_Library.Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.ChooseSteamGame.FE.Dialog.Adapter.Controller
 {

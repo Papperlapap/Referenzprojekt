@@ -10,7 +10,7 @@ namespace Gaming_Library.ChooseSteamGame.BL.UseCase.Interactor
     public sealed class Model
     {
         public Entity.SteamGameData steamGameData { get; set; }
-        public Gaming_Library.BL.UseCase.Entity.Types.SteamId steamId { get; set; }
+        public Gaming_Library.Library.BL.UseCase.Entity.Types.SteamId steamId { get; set; }
 
         public bool IsModified { get; set; }
 
