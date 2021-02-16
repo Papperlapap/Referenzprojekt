@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Gaming_Library.BL.UseCase.OutputPort;
-using Gaming_Library.FE.Dialog.Adapter.View;
+using System.Collections.Generic;
+using Gaming_Library.Library.BL.UseCase.OutputPort;
+using Gaming_Library.Library.FE.Dialog.Adapter.View;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Presenter
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Presenter
 {
     public sealed class ToViewModel : IToViewModel
     {
@@ -51,9 +52,9 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
                 viewGame.SteamId = game.SteamId.ToString();
                 viewGame.Title = game.Title.GameTitle;
                 viewGame.Year = game.Year.PublicationYear.ToString("yyyy");
-                viewGame.Tags = new string[0];
+                viewGame.Tags = new List<string>();
                 foreach (var tag in game.Tags) {
-                    viewGame.Tags = viewGame.Tags.Append(tag.GameTag).ToArray();
+                    viewGame.Tags = viewGame.Tags.Append(tag.GameTag).ToList();
 
                 }
 

@@ -1,4 +1,4 @@
-﻿namespace Gaming_Library.BL.UseCase.Entity
+﻿namespace Gaming_Library.Library.BL.UseCase.Entity
 {
     public class IGameEntity
     {

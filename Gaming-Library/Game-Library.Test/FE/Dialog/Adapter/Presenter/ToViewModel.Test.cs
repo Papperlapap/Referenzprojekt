@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.FE.Dialog.Adapter.Presenter;
+using Gaming_Library.Library.FE.Dialog.Adapter.Presenter;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Game_Library.Test.FE.Dialog.Adapter.Presenter
+namespace Game_Library.Library.Test.FE.Dialog.Adapter.Presenter
 {
 
     [TestClass]
@@ -19,7 +19,7 @@ namespace Game_Library.Test.FE.Dialog.Adapter.Presenter
         [TestMethod]
         public void CreateToViewModelTest()
         {
-            var responseModel = new Gaming_Library.BL.UseCase.OutputPort.ResponseModel();
+            var responseModel = new Gaming_Library.Library.BL.UseCase.OutputPort.ResponseModel();
             var injector = new ToViewModel.Injector(responseModel);
             var viewModelConverter = ToViewModel.Create(injector);
 
@@ -28,18 +28,18 @@ namespace Game_Library.Test.FE.Dialog.Adapter.Presenter
 
         public void ToViewModelTest()
         {
-            var responseModel = new Gaming_Library.BL.UseCase.OutputPort.ResponseModel();
-            responseModel.Games.Add(new Gaming_Library.BL.UseCase.OutputPort.ResponseModel.GameData()
+            var responseModel = new Gaming_Library.Library.BL.UseCase.OutputPort.ResponseModel();
+            responseModel.Games.Add(new Gaming_Library.Library.BL.UseCase.OutputPort.ResponseModel.GameData()
             {
-                SteamId = new Gaming_Library.BL.UseCase.Entity.Types.SteamId(1),
-                Title = new Gaming_Library.BL.UseCase.Entity.Types.Title("Testgame"),
-                Publisher = new Gaming_Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
-                Year = new Gaming_Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
-                Genres = new Gaming_Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.BL.UseCase.Entity.Types.Genre("Unittest") },
-                Attributes = new Gaming_Library.BL.UseCase.Entity.Types.GameAttributes(),
-                Image = new Gaming_Library.BL.UseCase.Entity.Types.Image(null),
-                Location = new Gaming_Library.BL.UseCase.Entity.Types.Location("here"),
-                Tags = new Gaming_Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag2") },
+                SteamId = new Gaming_Library.Library.BL.UseCase.Entity.Types.SteamId(1),
+                Title = new Gaming_Library.Library.BL.UseCase.Entity.Types.Title("Testgame"),
+                Publisher = new Gaming_Library.Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
+                Year = new Gaming_Library.Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
+                Genres = new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
+                Attributes = new Gaming_Library.Library.BL.UseCase.Entity.Types.GameAttributes(),
+                Image = new Gaming_Library.Library.BL.UseCase.Entity.Types.Image(null),
+                Location = new Gaming_Library.Library.BL.UseCase.Entity.Types.Location("here"),
+                Tags = new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
             });
 
 

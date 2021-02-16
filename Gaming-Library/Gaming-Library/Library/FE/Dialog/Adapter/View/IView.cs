@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.FE.Dialog.Adapter.View
+namespace Gaming_Library.Library.FE.Dialog.Adapter.View
 {
     public interface IView
     {

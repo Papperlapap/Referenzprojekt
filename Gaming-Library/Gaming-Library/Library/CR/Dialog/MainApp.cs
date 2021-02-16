@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gaming_Library
+namespace Gaming_Library.Library
 {
     static class MainApp
     {
@@ -41,7 +40,8 @@ namespace Gaming_Library
             var interactorInjector = new BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);
             var interactor = BL.UseCase.Interactor.Interactor.Create(interactorInjector);
 
-            var controllerInjector = new FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor);
+            var genresEditor = new GenresPropertyDialog.FE.Adapter.Controller.GenresEditor(viewModel);
+            var controllerInjector = new FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor, genresEditor);
             var controller = FE.Dialog.Adapter.Controller.Controller.Create(controllerInjector);
 
             views.Add(new LibraryDialog(controller, viewModel));

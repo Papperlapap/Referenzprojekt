@@ -1,6 +1,8 @@
-﻿using Gaming_Library.BL.UseCase.Entity;
+﻿using System.Windows.Forms;
 
-namespace Gaming_Library.FE.Dialog.Adapter.Controller
+using Gaming_Library.Library.BL.UseCase.Entity;
+
+namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
     public interface IController
     {
@@ -9,6 +11,8 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
         public void DeleteGame(int index);
         public void AddGame(View.Model.GameData game);
         public void ModifyGame(int index, View.Model.GameData game);
-        void SearchForTitle(string title);
+        public void SearchForTitle(string title);
+        public void EditGenres(int index, View.Model.GameData game);
+
     }
 }

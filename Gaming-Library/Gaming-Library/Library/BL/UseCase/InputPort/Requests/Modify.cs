@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.Entity.Types;
-using System.Drawing;
+﻿using System.Collections.Generic;
 
-namespace Gaming_Library.BL.UseCase.InputPort.Requests
+namespace Gaming_Library.Library.BL.UseCase.InputPort.Requests
 {
     public sealed class Modify : IRequest
     {
@@ -21,7 +14,7 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
             public string? Location;
             public string? Year;
             public string? ImagePath;
-            public string[]? Tags;
+            public List<string>? Tags;
             public string? Genres;
             public BL.UseCase.Entity.Types.GameAttributes? Attributes;
 #nullable disable

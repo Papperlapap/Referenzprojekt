@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Gaming_Library.BL.UseCase.Entity.Types;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
+using Gaming_Library.Library.BL.UseCase.Entity.Types;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     public class Modify : ICommand
     {
@@ -45,7 +45,9 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).SteamId = new SteamId(Convert.ToInt32(modifyRequest.Game.SteamId));
             }
             if (modifyRequest.Game.Tags != null) {
-                //_model.Games.ElementAt(modifyRequest.GameIndex).Tags = (Tag[])modifyRequest.Game.Tags;
+                foreach (var tag in modifyRequest.Game.Tags) {
+                    _model.Games.ElementAt(modifyRequest.GameIndex).Tags.Add(new Tag(tag));
+                }
             }
             if (modifyRequest.Game.Title != null) {
                 _model.Games.ElementAt(modifyRequest.GameIndex).Title = new Title(modifyRequest.Game.Title);

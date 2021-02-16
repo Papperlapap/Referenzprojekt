@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gaming_Library.BL.UseCase.Entity.Types;
+using Gaming_Library.Library.BL.UseCase.Entity.Types;
 
-namespace Gaming_Library.BL.UseCase.Entity
+namespace Gaming_Library.Library.BL.UseCase.Entity
 {
     [Equals]
     public sealed class GameData
@@ -21,7 +21,7 @@ namespace Gaming_Library.BL.UseCase.Entity
         public YearOfPublication Year { get; set; }
 
         public Image Image { get; set; }
-        public Tag[] Tags { get; set; }
+        public List<Tag> Tags { get; set; }
         public Genre[] Genres { get; set; }
         public GameAttributes Attributes { get; set; }
 

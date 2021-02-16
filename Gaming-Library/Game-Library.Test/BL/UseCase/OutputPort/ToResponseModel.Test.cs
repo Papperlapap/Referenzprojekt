@@ -3,8 +3,8 @@ using System.Drawing;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Gaming_Library.BL.UseCase.OutputPort;
-using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.Library.BL.UseCase.OutputPort;
+using Gaming_Library.Library.BL.UseCase.Entity;
 
 namespace Game_Library.UseCase.OutputPort
 {
@@ -17,7 +17,7 @@ namespace Game_Library.UseCase.OutputPort
         [TestMethod]
         public void CreateToResponseModelTest()
         {
-            var interactorModel = new Gaming_Library.BL.UseCase.Interactor.Model();
+            var interactorModel = new Gaming_Library.Library.BL.UseCase.Interactor.Model();
             var injector = new ToResponseModel.Injector(interactorModel);
             var responseModelConverter = ToResponseModel.Create(injector);
 
@@ -28,18 +28,18 @@ namespace Game_Library.UseCase.OutputPort
         [TestMethod]
         public void ToResponseModelTest()
         {
-            var interactorModel = new Gaming_Library.BL.UseCase.Interactor.Model();
+            var interactorModel = new Gaming_Library.Library.BL.UseCase.Interactor.Model();
             interactorModel.Games.Add(new GameData()
             {
-                SteamId = new Gaming_Library.BL.UseCase.Entity.Types.SteamId(1),
-                Title = new Gaming_Library.BL.UseCase.Entity.Types.Title("Testgame"),
-                Publisher = new Gaming_Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
-                Year = new Gaming_Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
-                Genres = new Gaming_Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.BL.UseCase.Entity.Types.Genre("Unittest") },
-                Attributes = new Gaming_Library.BL.UseCase.Entity.Types.GameAttributes(),
-                Image = new Gaming_Library.BL.UseCase.Entity.Types.Image("C:\\"),
-                Location = new Gaming_Library.BL.UseCase.Entity.Types.Location("here"),
-                Tags = new Gaming_Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag2") },
+                SteamId = new Gaming_Library.Library.BL.UseCase.Entity.Types.SteamId(1),
+                Title = new Gaming_Library.Library.BL.UseCase.Entity.Types.Title("Testgame"),
+                Publisher = new Gaming_Library.Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
+                Year = new Gaming_Library.Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
+                Genres = new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
+                Attributes = new Gaming_Library.Library.BL.UseCase.Entity.Types.GameAttributes(),
+                Image = new Gaming_Library.Library.BL.UseCase.Entity.Types.Image("C:\\"),
+                Location = new Gaming_Library.Library.BL.UseCase.Entity.Types.Location("here"),
+                Tags = new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
             });
             var injector = new ToResponseModel.Injector(interactorModel);
             var responseModelConverter = ToResponseModel.Create(injector);

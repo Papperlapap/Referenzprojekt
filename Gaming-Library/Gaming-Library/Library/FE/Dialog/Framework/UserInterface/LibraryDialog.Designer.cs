@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Gaming_Library
+namespace Gaming_Library.Library
 {
     partial class LibraryDialog
     {
@@ -658,11 +658,11 @@ namespace Gaming_Library
             // 
             // gameDataBindingSource1
             // 
-            this.gameDataBindingSource1.DataSource = typeof(Gaming_Library.BL.UseCase.Entity.GameData);
+            this.gameDataBindingSource1.DataSource = typeof(Gaming_Library.Library.BL.UseCase.Entity.GameData);
             // 
             // gameDataBindingSource
             // 
-            this.gameDataBindingSource.DataSource = typeof(Gaming_Library.BL.UseCase.Entity.GameData);
+            this.gameDataBindingSource.DataSource = typeof(Gaming_Library.Library.BL.UseCase.Entity.GameData);
             // 
             // LibraryDialog
             // 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Interactor.Commands;
+using Gaming_Library.Library.BL.UseCase.Interactor.Commands;
 
-namespace Gaming_Library.BL.UseCase.InputPort.Requests
+namespace Gaming_Library.Library.BL.UseCase.InputPort.Requests
 {
     public class Processor : IProcessor
     {

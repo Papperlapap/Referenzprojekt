@@ -134,6 +134,7 @@
     <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\ResponseModel.cs" />
     <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\ToResponseModel.cs" />
     <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\Controller.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\GenresEditor.cs" />
     <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\IController.cs" />
     <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\ToSaveRequest.cs" />
     <Compile Include="GenresPropertyDialog\FE\Adapter\Presenter\IToViewModel.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Library\DA\Repository\SteamFileExtractionClasses.cs" />
     <Compile Include="Library\FE\Dialog\Adapter\Controller\Controller.cs" />
     <Compile Include="Library\FE\Dialog\Adapter\Controller\IController.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Controller\IGenresEditor.cs" />
     <Compile Include="Library\FE\Dialog\Adapter\Controller\ToAddRequest.cs" />
     <Compile Include="Library\FE\Dialog\Adapter\Controller\ToModifyRequest.cs" />
     <Compile Include="Library\FE\Dialog\Adapter\Presenter\Presenter.cs" />

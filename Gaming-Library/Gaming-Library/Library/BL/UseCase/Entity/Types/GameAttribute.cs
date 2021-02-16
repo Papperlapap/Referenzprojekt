@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gaming_Library.BL.UseCase.Entity.Types
+namespace Gaming_Library.Library.BL.UseCase.Entity.Types
 {
     public sealed class GameAttributes
     {

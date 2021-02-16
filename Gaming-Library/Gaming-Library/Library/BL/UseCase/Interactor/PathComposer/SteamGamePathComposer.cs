@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.BL.UseCase.Interactor.PathComposer
+namespace Gaming_Library.Library.BL.UseCase.Interactor.PathComposer
 {
     public class SteamGamePathComposer : IGamePathComposer
     {

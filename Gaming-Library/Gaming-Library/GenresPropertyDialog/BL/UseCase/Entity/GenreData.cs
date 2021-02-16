@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gaming_Library.BL.UseCase.Entity.Types;
+using Gaming_Library.Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.GenresPropertyDialog.BL.UseCase.Entity
 {

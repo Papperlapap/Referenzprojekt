@@ -1,4 +1,4 @@
-﻿namespace Gaming_Library.FE.Dialog.Framework.UserInterface
+﻿namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
 {
     partial class GameProperties
     {
@@ -61,10 +61,11 @@
             this.isVR = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.genresCombo = new System.Windows.Forms.ComboBox();
             this.buttonEditGenres = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.steamID = new System.Windows.Forms.Label();
+            this.genresList = new System.Windows.Forms.ListView();
+            this.Genre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,7 +105,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -115,7 +116,7 @@
             // 
             // buttonProperties
             // 
-            this.buttonProperties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonProperties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonProperties.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonProperties.FlatAppearance.BorderSize = 0;
@@ -267,8 +268,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel1.Controls.Add(this.publisher);
@@ -453,14 +454,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // genresCombo
-            // 
-            this.genresCombo.FormattingEnabled = true;
-            this.genresCombo.Location = new System.Drawing.Point(87, 113);
-            this.genresCombo.Name = "genresCombo";
-            this.genresCombo.Size = new System.Drawing.Size(100, 21);
-            this.genresCombo.TabIndex = 4;
-            // 
             // buttonEditGenres
             // 
             this.buttonEditGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -488,16 +481,36 @@
             this.steamID.Size = new System.Drawing.Size(0, 13);
             this.steamID.TabIndex = 32;
             // 
+            // genresList
+            // 
+            this.genresList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Genre});
+            this.genresList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.genresList.HideSelection = false;
+            this.genresList.Location = new System.Drawing.Point(91, 115);
+            this.genresList.MinimumSize = new System.Drawing.Size(75, 45);
+            this.genresList.Name = "genresList";
+            this.genresList.Size = new System.Drawing.Size(96, 45);
+            this.genresList.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.genresList.TabIndex = 33;
+            this.genresList.UseCompatibleStateImageBehavior = false;
+            this.genresList.View = System.Windows.Forms.View.Details;
+            // 
+            // Genre
+            // 
+            this.Genre.Text = "Genre";
+            this.Genre.Width = 75;
+            // 
             // GameProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(384, 231);
+            this.Controls.Add(this.buttonProperties);
+            this.Controls.Add(this.genresList);
             this.Controls.Add(this.steamID);
             this.Controls.Add(this.buttonEditGenres);
-            this.Controls.Add(this.genresCombo);
-            this.Controls.Add(this.buttonProperties);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonSearchForTitle);
@@ -562,9 +575,10 @@
         private System.Windows.Forms.TextBox publisher;
         private System.Windows.Forms.TextBox tags;
         private System.Windows.Forms.TextBox publicationYear;
-        private System.Windows.Forms.ComboBox genresCombo;
         private System.Windows.Forms.Button buttonEditGenres;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label steamID;
+        private System.Windows.Forms.ListView genresList;
+        private System.Windows.Forms.ColumnHeader Genre;
     }
 }

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
-using Gaming_Library.DA;
+using Gaming_Library.Library.BL.UseCase.Entity;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
-namespace Gaming_Library.BL.UseCase.Interactor.Commands
+namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
 {
     class Load : ICommand
     {
@@ -49,7 +45,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 Location = new Entity.Types.Location("C:\\"),
                 Publisher = new Entity.Types.Publisher("SomeCoorp"),
                 SteamId = new Entity.Types.SteamId(945360),
-                Tags = new Entity.Types.Tag[0],
+                Tags = new List<Entity.Types.Tag>(),
                 Attributes = new Entity.Types.GameAttributes(),
             });
 
@@ -62,7 +58,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 Location = new Entity.Types.Location("C:\\"),
                 Publisher = new Entity.Types.Publisher("Valve"),
                 SteamId = new Entity.Types.SteamId(730),
-                Tags = new Entity.Types.Tag[0],
+                Tags = new List<Entity.Types.Tag>(),
                 Attributes = new Entity.Types.GameAttributes(),
             });
         }

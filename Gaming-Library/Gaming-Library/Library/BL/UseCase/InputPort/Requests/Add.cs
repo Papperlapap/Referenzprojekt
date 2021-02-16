@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Gaming_Library.BL.UseCase.InputPort.Requests
+namespace Gaming_Library.Library.BL.UseCase.InputPort.Requests
 {
     public class Add : IRequest
     {
@@ -18,7 +18,7 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
             public string? Location;
             public string? Year;
             public string? ImagePath;
-            public string[]? Tags;
+            public List<string>? Tags;
             public string? Genre;
             public Entity.Types.GameAttributes? Attributes;
 #nullable disable

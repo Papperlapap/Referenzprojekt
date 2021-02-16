@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Gaming_Library.BL.UseCase.Entity.Types
+namespace Gaming_Library.Library.BL.UseCase.Entity.Types
 {
     [Equals]
     public sealed class Image
