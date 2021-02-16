@@ -79,6 +79,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseSteamGame\BL\UseCase\Entity\Types\App.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Entity\Types\AppList.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Entity\SteamGameData.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Entity\Types\SearchTerm.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Entity\Types\SteamGameList.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\IInteractor.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\RequestModel.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\Requests\IProcessor.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\Requests\IRequest.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\Requests\Processor.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\Requests\Save.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\InputPort\Requests\SearchGames.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Commands\Commands.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Commands\ICommand.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Commands\Save.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Commands\SearchGames.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Interactor.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\Interactor\Model.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\OutputPort\IPresenter.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\OutputPort\IToResponseModel.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\OutputPort\ResponseModel.cs" />
+    <Compile Include="ChooseSteamGame\BL\UseCase\OutputPort\ToResponseModel.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Controller\Controller.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Controller\IController.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Controller\ToSaveRequest.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Presenter\IToViewModel.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Presenter\Presenter.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\Presenter\ToViewModel.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\View\IView.cs" />
+    <Compile Include="ChooseSteamGame\FE\Adapter\View\Model.cs" />
+    <Compile Include="ChooseSteamGame\FE\Framework\UserInterface\ChooseSteamGameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseSteamGame\FE\Framework\UserInterface\ChooseSteamGameDialog.Designer.cs">
+      <DependentUpon>ChooseSteamGameDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenresPropertyDialog\BL\UseCase\Entity\GenreData.cs" />
     <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\IInteractor.cs" />
     <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\RequestModel.cs" />
@@ -191,6 +228,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="ChooseSteamGame\FE\Framework\UserInterface\ChooseSteamGameDialog.resx">
+      <DependentUpon>ChooseSteamGameDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Library\FE\Dialog\Framework\UserInterface\GameProperties.resx">
       <DependentUpon>GameProperties.cs</DependentUpon>
     </EmbeddedResource>
