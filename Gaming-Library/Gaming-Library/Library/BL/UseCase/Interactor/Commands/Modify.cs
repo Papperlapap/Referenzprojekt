@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 using Gaming_Library.Library.BL.UseCase.Entity.Types;
 using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
@@ -46,6 +47,7 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
             }
             if (modifyRequest.Game.Tags != null) {
                 foreach (var tag in modifyRequest.Game.Tags) {
+                    _model.Games.ElementAt(modifyRequest.GameIndex).Tags = new List<Tag>();
                     _model.Games.ElementAt(modifyRequest.GameIndex).Tags.Add(new Tag(tag));
                 }
             }

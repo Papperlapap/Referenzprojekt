@@ -1,6 +1,5 @@
 ﻿using System.Windows.Forms;
 
-using Gaming_Library.Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
