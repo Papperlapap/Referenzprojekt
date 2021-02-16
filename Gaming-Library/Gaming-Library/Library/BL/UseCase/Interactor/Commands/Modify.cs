@@ -26,11 +26,11 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).Attributes = modifyRequest.Game.Attributes;
             }
             if (modifyRequest.Game.Genres != null) {
-                _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new Genre[0];
-                var genres = modifyRequest.Game.Genres.Split(',');
+                _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new List<Genre>();
+                var genres = modifyRequest.Game.Genres;
 
-                foreach (var genre in genres) {
-                    _model.Games.ElementAt(modifyRequest.GameIndex).Genres = _model.Games.ElementAt(modifyRequest.GameIndex).Genres.Append(new Genre(genre)).ToArray();
+                foreach (var genre in genres.Split(',')) {
+                    _model.Games.ElementAt(modifyRequest.GameIndex).Genres.Add(new Genre(genre.Trim()));
                 }
             }
             if (modifyRequest.Game.ImagePath != null) {

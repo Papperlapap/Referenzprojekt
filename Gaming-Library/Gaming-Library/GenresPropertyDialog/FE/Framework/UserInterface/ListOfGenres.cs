@@ -56,7 +56,7 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Dialog.Framework.UserInterface
         {
             _viewModel.Genres.Genres.Clear();
             foreach (ListViewItem genre in _genres) {
-                _viewModel.Genres.Genres = _viewModel.Genres.Genres.Append(genre.Text).ToList();
+                _viewModel.Genres.Genres.Add(genre.Text);
             }
             DialogResult = DialogResult.OK;
             _controller.SaveGenres(_viewModel);

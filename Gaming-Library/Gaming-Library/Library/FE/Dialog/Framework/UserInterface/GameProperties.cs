@@ -20,7 +20,7 @@ namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
             _controller = controller;
             _location = location;
 
-            _game = new Adapter.View.Model.GameData().DeepCopy(game);
+            _game = game;
             _gameIndex = gameIndex;
 
             InitializeComponent();

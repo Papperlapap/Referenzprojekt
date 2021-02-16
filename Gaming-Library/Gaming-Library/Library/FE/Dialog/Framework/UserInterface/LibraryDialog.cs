@@ -43,8 +43,6 @@ namespace Gaming_Library.Library
         private void LoadData()
         {
             _controller.LoadData();
-            gameListView.SetObjects(_viewModel.Games);
-
         }
 
         private void searchInViewTextBox_Enter(object sender, EventArgs e)
@@ -237,6 +235,7 @@ namespace Gaming_Library.Library
                 (Model.GameData)gameListView.SelectedObject,
                 gameListView.SelectedIndex);
             propertiesForm.ShowDialog(this);
+            LoadData();
         }
 
     }

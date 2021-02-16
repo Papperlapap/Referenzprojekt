@@ -74,8 +74,7 @@ namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 
         public void EditGenres(int index, View.Model.GameData game)
         {
-            var genres = _injector.GenresEditor.UpdateGenres(index);
-            game.Genres = genres != null ? string.Join(",", genres.Genres.Genres) : game.Genres;
+            _injector.GenresEditor.UpdateGenres(index);
         }
 
 

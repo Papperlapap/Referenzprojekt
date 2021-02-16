@@ -32,9 +32,14 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
                 Image = new Image(addRequest.Game.ImagePath),
                 Tags = new List<Tag>(),
                 Year = new YearOfPublication(new DateTime(Convert.ToInt32(addRequest.Game.Year), 1, 1)),
-                Genres = new Genre[1] { new Genre(addRequest.Game.Genre) },
+                Genres = new List<Genre>(),
                 Attributes = addRequest.Game.Attributes,
             });
+            foreach (var tag in addRequest.Game.Genres.Split(',')) {
+                var index = _model.Games.Count - 1;
+                _model.Games[index].Genres.Add(new Genre(tag.Trim()));
+
+            }
             foreach (var tag in addRequest.Game.Tags) {
                 var index = _model.Games.Count - 1;
                 _model.Games[index].Tags.Add(new Tag(tag));

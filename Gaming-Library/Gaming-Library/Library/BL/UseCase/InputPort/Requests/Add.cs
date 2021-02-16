@@ -16,7 +16,7 @@ namespace Gaming_Library.Library.BL.UseCase.InputPort.Requests
             public string? Year;
             public string? ImagePath;
             public List<string>? Tags;
-            public string? Genre;
+            public string? Genres;
             public Entity.Types.GameAttributes? Attributes;
 #nullable disable
         }
