@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Gaming_Library.Library.BL.UseCase.OutputPort;
@@ -35,11 +35,11 @@ namespace Game_Library.UseCase.OutputPort
                 Title = new Gaming_Library.Library.BL.UseCase.Entity.Types.Title("Testgame"),
                 Publisher = new Gaming_Library.Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
                 Year = new Gaming_Library.Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
-                Genres = new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
+                Genres = new List<Gaming_Library.Library.BL.UseCase.Entity.Types.Genre> { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
                 Attributes = new Gaming_Library.Library.BL.UseCase.Entity.Types.GameAttributes(),
                 Image = new Gaming_Library.Library.BL.UseCase.Entity.Types.Image("C:\\"),
                 Location = new Gaming_Library.Library.BL.UseCase.Entity.Types.Location("here"),
-                Tags = new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
+                Tags = new List<Gaming_Library.Library.BL.UseCase.Entity.Types.Tag> { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
             });
             var injector = new ToResponseModel.Injector(interactorModel);
             var responseModelConverter = ToResponseModel.Create(injector);

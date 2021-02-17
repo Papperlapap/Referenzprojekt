@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Gaming_Library.DA.Repository.Standard;
-using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.Library.DA.Repository.Standard;
+using Gaming_Library.Library.BL.UseCase.Entity;
 using System.IO;
 
 namespace Game_Library.Test.DA.Repository.Standard

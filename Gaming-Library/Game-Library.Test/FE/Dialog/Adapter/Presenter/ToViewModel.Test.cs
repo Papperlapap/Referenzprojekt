@@ -35,11 +35,11 @@ namespace Game_Library.Library.Test.FE.Dialog.Adapter.Presenter
                 Title = new Gaming_Library.Library.BL.UseCase.Entity.Types.Title("Testgame"),
                 Publisher = new Gaming_Library.Library.BL.UseCase.Entity.Types.Publisher("Memyself"),
                 Year = new Gaming_Library.Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
-                Genres = new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
+                Genres = new List<Gaming_Library.Library.BL.UseCase.Entity.Types.Genre> { new Gaming_Library.Library.BL.UseCase.Entity.Types.Genre("Unittest") },
                 Attributes = new Gaming_Library.Library.BL.UseCase.Entity.Types.GameAttributes(),
                 Image = new Gaming_Library.Library.BL.UseCase.Entity.Types.Image(null),
                 Location = new Gaming_Library.Library.BL.UseCase.Entity.Types.Location("here"),
-                Tags = new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
+                Tags = new List<Gaming_Library.Library.BL.UseCase.Entity.Types.Tag> { new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.Library.BL.UseCase.Entity.Types.Tag("tag2") },
             });
 
 
@@ -58,7 +58,7 @@ namespace Game_Library.Library.Test.FE.Dialog.Adapter.Presenter
             Assert.IsTrue(viewModel.Games[0].Image == responseModel.Games[0].Image.GameImage);
             Assert.IsTrue(viewModel.Games[0].Location == responseModel.Games[0].Location.ToString());
             //TODO: fix this
-            Assert.IsTrue(viewModel.Games[0].Tags.Length == responseModel.Games[0].Tags.Length);
+            Assert.IsTrue(viewModel.Games[0].Tags.Count == responseModel.Games[0].Tags.Count);
 
         }
     }

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Collections.Generic;
-using Gaming_Library.BL.UseCase.InputPort;
-using Gaming_Library.BL.UseCase.InputPort.Requests;
-using Gaming_Library.BL.UseCase.Interactor;
+using Gaming_Library.Library.BL.UseCase.InputPort;
+using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -20,7 +19,7 @@ namespace Game_Library.UseCase.InputPort.Requests.Test
         public void CreateProcessorTest()
         {
             var requestModel = new RequestModel();
-            var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
+            var commands = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommands>();
             var injector = new Processor.Injector(requestModel, commands.Object);
             var processor = Processor.Create(injector);
 
@@ -37,10 +36,10 @@ namespace Game_Library.UseCase.InputPort.Requests.Test
                request
             };
 
-            var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
+            var command = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommand>();
             command.Setup(x => x.Do(new Add())).Verifiable();
 
-            var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
+            var commands = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
 
             var injector = new Processor.Injector(requestModel, commands.Object);
@@ -62,10 +61,10 @@ namespace Game_Library.UseCase.InputPort.Requests.Test
                request,
             };
 
-            var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
+            var command = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommand>();
             command.Setup(x => x.Do(new Add())).Verifiable();
 
-            var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
+            var commands = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
 
             var injector = new Processor.Injector(requestModel, commands.Object);
@@ -82,10 +81,10 @@ namespace Game_Library.UseCase.InputPort.Requests.Test
             var request = new Add();
             requestModel.Requests = new List<IRequest>();
 
-            var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
+            var command = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommand>();
             command.Setup(x => x.Do(new Add())).Verifiable();
 
-            var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
+            var commands = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
 
             var injector = new Processor.Injector(requestModel, commands.Object);
@@ -106,10 +105,10 @@ namespace Game_Library.UseCase.InputPort.Requests.Test
                 null
             };
 
-            var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
+            var command = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommand>();
             command.Setup(x => x.Do(new Add())).Verifiable();
 
-            var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
+            var commands = new Mock<Gaming_Library.Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
 
             var injector = new Processor.Injector(requestModel, commands.Object);

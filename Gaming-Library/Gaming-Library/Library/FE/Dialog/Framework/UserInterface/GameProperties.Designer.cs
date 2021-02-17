@@ -78,7 +78,7 @@
             this.saveProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.saveProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveProperties.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.saveProperties.Location = new System.Drawing.Point(297, 196);
+            this.saveProperties.Location = new System.Drawing.Point(297, 211);
             this.saveProperties.Name = "saveProperties";
             this.saveProperties.Size = new System.Drawing.Size(75, 23);
             this.saveProperties.TabIndex = 9;
@@ -95,7 +95,7 @@
             this.cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cancel.Location = new System.Drawing.Point(216, 196);
+            this.cancel.Location = new System.Drawing.Point(216, 211);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 8;
@@ -109,7 +109,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(0, 191);
+            this.label3.Location = new System.Drawing.Point(0, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(384, 1);
             this.label3.TabIndex = 6;
@@ -125,7 +125,7 @@
             this.buttonProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonProperties.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonProperties.Location = new System.Drawing.Point(1, 164);
+            this.buttonProperties.Location = new System.Drawing.Point(1, 178);
             this.buttonProperties.Name = "buttonProperties";
             this.buttonProperties.Size = new System.Drawing.Size(383, 27);
             this.buttonProperties.TabIndex = 6;
@@ -287,7 +287,7 @@
             this.panel1.Controls.Add(this.controllerFull);
             this.panel1.Controls.Add(this.isVR);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(0, 191);
+            this.panel1.Location = new System.Drawing.Point(0, 205);
             this.panel1.MaximumSize = new System.Drawing.Size(540, 175);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 0);
@@ -490,7 +490,7 @@
             this.genresList.Location = new System.Drawing.Point(91, 115);
             this.genresList.MinimumSize = new System.Drawing.Size(75, 45);
             this.genresList.Name = "genresList";
-            this.genresList.Size = new System.Drawing.Size(96, 45);
+            this.genresList.Size = new System.Drawing.Size(96, 57);
             this.genresList.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.genresList.TabIndex = 33;
             this.genresList.UseCompatibleStateImageBehavior = false;
@@ -506,7 +506,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(384, 231);
+            this.ClientSize = new System.Drawing.Size(384, 246);
             this.Controls.Add(this.buttonProperties);
             this.Controls.Add(this.genresList);
             this.Controls.Add(this.steamID);
@@ -530,7 +530,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(556, 465);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(400, 270);
+            this.MinimumSize = new System.Drawing.Size(400, 285);
             this.Name = "GameProperties";
             this.Text = "Eigenschaften";
             this.Load += new System.EventHandler(this.GameProperties_Load);
