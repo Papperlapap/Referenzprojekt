@@ -107,6 +107,7 @@ namespace Gaming_Library.Library.FE.Dialog.Framework.UserInterface
         private void buttonSearchForTitle_Click(object sender, EventArgs e)
         {
             _controller.SearchForTitle(title.Text);
+            UpdateView();
         }
 
         private void buttonSetImagePath_Click(object sender, EventArgs e)
