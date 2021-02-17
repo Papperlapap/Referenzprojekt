@@ -19,5 +19,8 @@ namespace Gaming_Library.ChooseSteamGame.BL.UseCase.Interactor
             IsModified = model.IsModified;
             steamGameData = model.steamGameData;
         }
+
+        public static bool operator ==(Model left, Model right) => Operator.Weave(left, right);
+        public static bool operator !=(Model left, Model right) => Operator.Weave(left, right);
     }
 }

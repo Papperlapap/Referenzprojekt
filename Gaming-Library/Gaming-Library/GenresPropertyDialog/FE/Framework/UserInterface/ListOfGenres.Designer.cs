@@ -42,6 +42,7 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Dialog.Framework.UserInterface
             this.genresListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Genre});
             this.genresListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.genresListView.HideSelection = false;
             this.genresListView.Location = new System.Drawing.Point(12, 12);
             this.genresListView.MinimumSize = new System.Drawing.Size(75, 140);
             this.genresListView.Name = "genresListView";

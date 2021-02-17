@@ -42,5 +42,10 @@ namespace Gaming_Library.ChooseSteamGame.FE.Dialog.Adapter.Controller
             requestModel.Requests.Add(request);
             _injector.Interactor.Update(requestModel);
         }
+
+        public void searchForGames(BL.UseCase.Entity.SteamGameData steamGameData)
+        {
+            SendRequest(new BL.UseCase.InputPort.Requests.SearchGames(steamGameData));
+        }
     }
 }
