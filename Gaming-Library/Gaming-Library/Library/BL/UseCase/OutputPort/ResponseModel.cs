@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gaming_Library.Library.BL.UseCase.OutputPort
 {
@@ -17,7 +14,7 @@ namespace Gaming_Library.Library.BL.UseCase.OutputPort
             public Entity.Types.YearOfPublication Year;
             public Entity.Types.Image Image;
             public List<Entity.Types.Tag> Tags;
-            public Entity.Types.Genre[] Genres;
+            public List<Entity.Types.Genre> Genres;
             public Entity.Types.GameAttributes Attributes;
         }
 

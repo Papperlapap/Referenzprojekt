@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gaming_Library.Library.FE.Dialog.Adapter.View;
+
 
 namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
 {
@@ -26,7 +22,7 @@ namespace Gaming_Library.Library.FE.Dialog.Adapter.Controller
             var addRequest = new BL.UseCase.InputPort.Requests.Add();
 
             addRequest.Game.Attributes = _game.Attributes;
-            addRequest.Game.Genre = _game.Genres;
+            addRequest.Game.Genres = _game.Genres;
             addRequest.Game.ImagePath = _game.ImagePath;
             addRequest.Game.Location = _game.Location;
             addRequest.Game.SteamId = _game.SteamId;

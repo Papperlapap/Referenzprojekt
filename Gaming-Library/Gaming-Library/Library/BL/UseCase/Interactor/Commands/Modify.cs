@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 using Gaming_Library.Library.BL.UseCase.Entity.Types;
 using Gaming_Library.Library.BL.UseCase.InputPort.Requests;
 
@@ -25,11 +26,11 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).Attributes = modifyRequest.Game.Attributes;
             }
             if (modifyRequest.Game.Genres != null) {
-                _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new Genre[0];
-                var genres = modifyRequest.Game.Genres.Split(',');
+                _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new List<Genre>();
+                var genres = modifyRequest.Game.Genres;
 
-                foreach (var genre in genres) {
-                    _model.Games.ElementAt(modifyRequest.GameIndex).Genres = _model.Games.ElementAt(modifyRequest.GameIndex).Genres.Append(new Genre(genre)).ToArray();
+                foreach (var genre in genres.Split(',')) {
+                    _model.Games.ElementAt(modifyRequest.GameIndex).Genres.Add(new Genre(genre.Trim()));
                 }
             }
             if (modifyRequest.Game.ImagePath != null) {
@@ -46,6 +47,7 @@ namespace Gaming_Library.Library.BL.UseCase.Interactor.Commands
             }
             if (modifyRequest.Game.Tags != null) {
                 foreach (var tag in modifyRequest.Game.Tags) {
+                    _model.Games.ElementAt(modifyRequest.GameIndex).Tags = new List<Tag>();
                     _model.Games.ElementAt(modifyRequest.GameIndex).Tags.Add(new Tag(tag));
                 }
             }

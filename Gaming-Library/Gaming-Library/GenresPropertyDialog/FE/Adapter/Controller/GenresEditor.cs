@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Gaming_Library.GenresPropertyDialog.FE.Dialog.Adapter.View;
 using System.Windows.Forms;
 
@@ -16,7 +14,7 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Adapter.Controller
             _viewModel = viewModel;
         }
 
-        public Model UpdateGenres(int index)
+        public void UpdateGenres(int index)
         {
             var interactorModel = new BL.UseCase.Interactor.Model();
             var viewModel = new Model();
@@ -41,11 +39,12 @@ namespace Gaming_Library.GenresPropertyDialog.FE.Adapter.Controller
 
 
             var genresPropertyDialog = new Dialog.Framework.UserInterface.ListOfGenres(controller, viewModel);
+            views.Add(genresPropertyDialog);
 
             if (genresPropertyDialog.ShowDialog() == DialogResult.OK) {
-                return viewModel;
+                _viewModel.Games.ElementAt(index).Genres = string.Join(", ", viewModel.Genres.Genres);
             }
-            return null;
         }
     }
 }
+

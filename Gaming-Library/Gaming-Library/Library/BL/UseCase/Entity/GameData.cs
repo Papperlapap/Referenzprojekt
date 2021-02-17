@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Gaming_Library.Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.Library.BL.UseCase.Entity
@@ -22,7 +17,7 @@ namespace Gaming_Library.Library.BL.UseCase.Entity
 
         public Image Image { get; set; }
         public List<Tag> Tags { get; set; }
-        public Genre[] Genres { get; set; }
+        public List<Genre> Genres { get; set; }
         public GameAttributes Attributes { get; set; }
 
         public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
